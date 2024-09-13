@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.hide{
+  display: none !important;
+}
+.show{
+  display: block;
+}
+#container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-color: #242425;
+  border-bottom: 1px solid #3b3b3b;
+}
+
+#header .file {
+  padding: 0 30px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #1e1e1e;
+}
+
+#editor {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #1e1e1e;
+}
+
+#tab {
+  padding: 10px 0 0 20px;
+  background-color: #000;
+  font-size: 12px;
+  border-top: 1px solid #3b3b3b;
+  color: #fff;
+}
+
+#terminal {
+  max-height: 200px;
+  padding-left: 28px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: #000;
+}
+
+.xterm-viewport.xterm-viewport {
+  scrollbar-width: none;
+}
+#loading{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+}
+.vscode-logo {
+  fill: #25aff3;
+  margin: auto;
+}
