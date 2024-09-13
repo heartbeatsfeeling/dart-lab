@@ -3,11 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let termDisabled = false
   // Monaco Editor Setup
   let monacoEditor = null
-  let editorContent = `void main() {
-  int a = 1;
-  int b = 2;
-  print('a: \$a, b:\$b');
-}`;
+  let editorContent = `void main() {\r  print('hello');\r}`;
   function run() {
     term.write('\x1b[2K\r');
     term.write('building...');
