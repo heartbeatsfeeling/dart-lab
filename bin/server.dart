@@ -43,8 +43,10 @@ Future<void> main() async {
   });
 }
 
-final _staticHandler =
-    shelf_static.createStaticHandler('public', defaultDocument: 'index.html');
+final _staticHandler = shelf_static.createStaticHandler(
+  '${Directory.current.path}/public',
+  defaultDocument: 'index.html',
+);
 
 Future<Response> dartRun({required String body, required String uuid}) async {
   final data = jsonDecode(body);
