@@ -44,7 +44,7 @@ Future<void> main() async {
 }
 
 final _staticHandler = shelf_static.createStaticHandler(
-  '${Directory.current.path}/public',
+  'public',
   defaultDocument: 'index.html',
 );
 
