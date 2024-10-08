@@ -24,7 +24,6 @@ Future<void> main() async {
 
     // Listen to incoming WebSocket messages
     webSocket.stream.listen((message) {
-      print('message${message}');
       var json = jsonDecode(message);
       if (json['type'] == 'run') {
         dartRun(body: jsonEncode(json['data']), uuid: v1)
@@ -51,7 +50,7 @@ final _staticHandler = shelf_static.createStaticHandler(
 
 Future<Response> dartRun({required String body, required String uuid}) async {
   final data = jsonDecode(body);
-  final tempFile = File('$uuid-temp.dart');
+  final tempFile = File('/$uuid-temp.dart');
   await tempFile.writeAsString(data);
   final result = await Process.run(
     'dart',
