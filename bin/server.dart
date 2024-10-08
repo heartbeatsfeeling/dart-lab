@@ -24,6 +24,7 @@ Future<void> main() async {
 
     // Listen to incoming WebSocket messages
     webSocket.stream.listen((message) {
+      print('message${message}');
       var json = jsonDecode(message);
       if (json['type'] == 'run') {
         dartRun(body: jsonEncode(json['data']), uuid: v1)
