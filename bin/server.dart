@@ -8,7 +8,7 @@ import 'package:uuid/uuid.dart';
 
 Future<void> main() async {
   final httpPort = 8084;
-  final wsPort = 8085;
+  final wsPort = 80;
   final cascade = Cascade().add(_staticHandler);
   final server = await shelf_io.serve(
     logRequests().addHandler(cascade.handler),
