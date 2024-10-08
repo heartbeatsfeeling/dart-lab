@@ -52,11 +52,8 @@ final _staticHandler = shelf_static.createStaticHandler(
 
 Future<Response> dartRun({required String body, required String uuid}) async {
   final data = jsonDecode(body);
-  print('1');
-  final tempFile = File('/$uuid-temp.dart');
-  print('${tempFile.path}2');
+  final tempFile = File('$uuid-temp.dart');
   await tempFile.writeAsString(data);
-  print('3');
   final result = await Process.run(
     'dart',
     [tempFile.path],
