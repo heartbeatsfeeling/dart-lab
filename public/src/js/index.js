@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })
   resizeObs.observe(document.body)
 
-  const ws = new WebSocket(`ws://${location.hostname}:80`);
+  const ws = new WebSocket(`ws://${location.hostname}:8085`);
   ws.onmessage = (event) => {
     const json = JSON.parse(event.data)
     if (json.type === 'run') {
