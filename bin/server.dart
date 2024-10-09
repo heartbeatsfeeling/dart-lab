@@ -58,7 +58,7 @@ Future<Response> dartRun({required String body, required String uuid}) async {
   final result = await Process.run(
     'dart',
     [tempFile.path],
-    workingDirectory: Directory.current.path,
+    workingDirectory: './',
   );
   await tempFile.delete();
   return Response.ok(
