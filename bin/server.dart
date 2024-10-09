@@ -54,7 +54,7 @@ Future<Response> dartRun({required String body, required String uuid}) async {
   final data = jsonDecode(body);
   final tempFile = File('$uuid-temp.dart');
   await tempFile.writeAsString(data);
-  print(tempFile.path);
+  await Process.run('chmod', ['755', tempFile.path]);
   final result = await Process.run(
     'dart',
     [tempFile.path],
